@@ -143,6 +143,6 @@ def api_id():
 , 'sha1': hash_sha1, 'sha256': hash_sha256, 'issuer': issued_by, 'issued_to': issued_to}
     
     
-    
+    check_dict.update(info_dict)
     return dict
 app.run()
