@@ -1,28 +1,28 @@
  chrome.runtime.onMessage.addListener
  (
-  function(msg, sender, sendResponse)
+  function(obj, sender, sendResponse)
   { console.log("executed");
-  console.log(msg);
-	if(msg.check1==1)
+  console.log(obj);
+	if(obj.check_1==1)
 	{
 		 var options = 
 {
 	type:"basic",
-	title:"A P T",
-	message:"all good",
-	iconUrl:"icon.png"
+	title:"Anti Phishing Toolkit",
+	message:"THE SITE IS SECURE",
+	iconUrl:"good.png"
 };
 chrome.notifications.create(options);
  
 	}
-		if(msg.check1==0)
+		else
 	{
 		 var options = 
 {
 	type:"basic",
-	title:"A P T",
-	message:"all bad",
-	iconUrl:"icon.png"
+	title:"Anti Phishing Toolkit",
+	message:"aBEWARE !! SONT ENTER YOUR CREDS ON THE SITE",
+	iconUrl:"bad.png"
 };
 chrome.notifications.create(options);
  
